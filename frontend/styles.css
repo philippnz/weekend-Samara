@@ -1,0 +1,11 @@
+
+body{font-family:system-ui,Arial;margin:0;background:#f7fbff;color:#0b2545}
+.app{max-width:640px;margin:0 auto;padding:12px}
+.header{text-align:center;padding:12px}
+.card{background:#fff;border-radius:10px;padding:12px;margin-bottom:12px;box-shadow:0 6px 18px rgba(11,37,69,.06)}
+.hero{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:#1976d2;color:#fff;border:none;cursor:pointer;margin:6px 0}
+.btn.outline{background:transparent;color:#1976d2;border:1px solid #1976d2}
+.hidden{display:none}
+.point{padding:8px 0;border-bottom:1px solid #eee}
+.actions{margin-top:8px}

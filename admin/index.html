@@ -1,0 +1,12 @@
+
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Weekend Samara</title><style>body{font-family:Arial;padding:12px} input,textarea{width:100%;margin:6px 0;padding:8px}</style></head><body>
+<h1>Admin — Weekend Samara (SKELETON)</h1><p>Нет аутентификации — не выкладывать публично без защиты.</p>
+<h2>Новый маршрут</h2>
+<form id="routeForm"><input name="title" placeholder="Title" required><textarea name="summary" placeholder="Summary"></textarea><input name="price" placeholder="Price"><button type="submit">Create route</button></form>
+<h2>Новая точка</h2>
+<form id="pointForm" enctype="multipart/form-data"><input name="route_id" placeholder="Route ID (1)" required><input name="ord" placeholder="Order (1)"><input name="title" placeholder="Point title" required><textarea name="description" placeholder="Description"></textarea><input type="file" name="media"><button type="submit">Create point</button></form>
+<script>
+document.getElementById('routeForm').addEventListener('submit', async (e)=>{e.preventDefault(); const fd=new FormData(e.target); const res=await fetch('/api/admin/routes',{method:'POST',body:fd}); alert('Route: '+JSON.stringify(await res.json()));});
+document.getElementById('pointForm').addEventListener('submit', async (e)=>{e.preventDefault(); const fd=new FormData(e.target); const res=await fetch('/api/admin/point',{method:'POST',body:fd}); alert('Point: '+JSON.stringify(await res.json()));});
+</script></body></html>
